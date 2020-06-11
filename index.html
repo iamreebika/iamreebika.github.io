@@ -1,58 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>My Project</title>
-    <style>
-        .main{
-            text-align: center;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hye, its me Reebika Bhatta</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="logic.js">
 
-
-    </style>
-
-
-
-
+    </script>
 </head>
 <body>
-<div id="loading">
-    loading...
-</div>
-<div class="main" id="mainContainer"hidden>
-    <img
-            height ="100"
-            width="100"
-            id="profileImage"
-    >
-    <h2 id ="fullName"></h2>
-    <p id="bio"></p>
-    <h5 id="followersInformation"></h5>
-    <p>
-        Check me on <a id ="githubLink">Github</a>
-    </p>
+<main id="main">
+
+    <section id="left-side-box">
+
+        <div id="profile-image">
+            <img src="image/mypic.jpg" alt="profile image" />
+        </div>
+
+        <div id="profile-title">
+            <h1>Reebika Bhatta</h1>
+
+        </div>
+
+        <div id="social">
+            <a href="https://www.linkedin.com/in/reebika-bhatta-39a577170" target="_blank"><img src="image/linkedn.png" alt="Linkedin" id="Linkedin" /></a>
+            <a href="https://www.facebook.com/profile.php?id=100010650069051" target="_blank" target="_blank"><img src="image/facebook_icon.png" alt="facebook" id="facebook" /></a>
+            <a href="https://www.instagram.com/ree_bka" target="_blank"><img src="image/instagram.png" alt="instagram" id="instagram" /></a>
+        </div>
+
+        <div id="bio">
+
+            <div id="location"><img src="image/location.png" alt="location" />Kathmandu</div>
+            <div id="github"><a href="https://github.com/iamreebika" target="_blank"><img src="image/github.png" alt="github"  />GitHub</a></div>
+        </div>
+
+        <div id="send-email">
+            <a href="mailto:bhattareebika@gmail" ><button id="email">Email me</button></a>
+
+        </div>
+    </section>
+
+    <section id="right-side-box">
+        <div id="about">
+            <h1>About me<h1><span id="bar"> </span>
+                <p> i described my self as someone who's persistant,a quick learner and loves problem solving by using simple and scalable solutions.</p>
+        </div>
+        <h1 id="ltitle">My Projects</h1>
 
 
-</div>
 
-<script>
-    fetch("https://api.github.com/users/iamreebika")
-        .then(response => response.json())
-        .then(function(data) {
-            console.log(data)
-            let followersCount = data['followers']
-            let followersInfo = 'I have 0 follower on Github'
-
-            document.getElementById('profileImage').src = data['avatar_url']
-            document.getElementById('fullName').textContent = data['name']
-            document.getElementById('bio').textContent = data['bio']
-            document.getElementById('followersInformation').textContent = followersInfo
+            <div id="Project"><a href="https://github.com/iamreebika?tab=repositories" target="_blank">Project1</a></div>
+        </div>
+    </section>
 
 
-            document.getElementById('githubLink').href = data['html_url']
-            document.getElementById('mainContainer').hidden= false
-            document.getElementById('loading').hidden= true
+</main>
 
-        })
-</script>
 
+</body>
+</html>
