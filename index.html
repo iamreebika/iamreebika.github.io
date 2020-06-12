@@ -5,7 +5,30 @@
     <title>Hye, its me Reebika Bhatta</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://pagination.js.org/dist/2.1.5/pagination.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css"/>
+    <style>
+        .paginationjs .paginationjs-pages li>a, .paginationjs .paginationjs-pages li.active>a, .paginationjs .paginationjs-pages li>a:hover{
+            background:transparent;
+        }
+        .paginationjs .paginationjs-pages li.active>a{
+            color:rgb(2, 2, 211);
+            font-weight: bold;
+        }
+        .paginationjs .paginationjs-pages li.active{
+            border:1px solid #aaa;
+        }
+        .paginationjs .paginationjs-pages li{
+            padding: 5px;
+        }
+        #pagination{
+            width: 55%;
+    margin: auto;
+        }
+      
+    </style>
 </head>
 <body>
 <main id="main">
@@ -45,8 +68,8 @@
                 <p> i described my self as someone who's persistant,a quick learner and loves problem solving by using simple and scalable solutions.</p>
         </div>
         <h1 id="ltitle">My Projects</h1>
-            <div id="gitfunc">
-            </div>
+            <div id="repoContainer"></div>
+            <div id="pagination"></div>
         </div>
     </section>
 
